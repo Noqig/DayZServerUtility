@@ -1,0 +1,266 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkh4ebj11vud1"]
+
+[ext_resource type="Script" path="res://Window.gd" id="1_n8res"]
+[ext_resource type="Script" path="res://ConfigChanger.gd" id="2_ahsbk"]
+
+[node name="ConfigScreen" type="Window"]
+initial_position = 2
+size = Vector2i(800, 600)
+unresizable = true
+script = ExtResource("1_n8res")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 360.0
+offset_bottom = 40.0
+script = ExtResource("2_ahsbk")
+
+[node name="ServerPort" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 365.0
+offset_bottom = 45.0
+
+[node name="Label" type="Label" parent="Control/ServerPort"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -245.61
+grow_horizontal = 2
+grow_vertical = 2
+text = "port"
+vertical_alignment = 1
+
+[node name="PortLineEdit" type="LineEdit" parent="Control/ServerPort"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 117.0
+offset_right = 0.390015
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ServerLocation" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 50.0
+offset_right = 365.0
+offset_bottom = 90.0
+
+[node name="Label" type="Label" parent="Control/ServerLocation"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -245.61
+grow_horizontal = 2
+grow_vertical = 2
+text = "server path"
+vertical_alignment = 1
+
+[node name="LocationLineEdit" type="LineEdit" parent="Control/ServerLocation"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 117.0
+offset_right = 0.390015
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ServerConfig" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 95.0
+offset_right = 365.0
+offset_bottom = 135.0
+
+[node name="Label" type="Label" parent="Control/ServerConfig"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -245.61
+grow_horizontal = 2
+grow_vertical = 2
+text = "Config File"
+vertical_alignment = 1
+
+[node name="ConfigLineEdit" type="LineEdit" parent="Control/ServerConfig"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 117.0
+offset_right = 0.390015
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ServerCores2" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 140.0
+offset_right = 365.0
+offset_bottom = 180.0
+
+[node name="Label" type="Label" parent="Control/ServerCores2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -245.61
+grow_horizontal = 2
+grow_vertical = 2
+text = "CPU Cores"
+vertical_alignment = 1
+
+[node name="CoresLineEdit" type="LineEdit" parent="Control/ServerCores2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 117.0
+offset_right = 0.390015
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DayZPath" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 5.0
+offset_right = 795.001
+offset_bottom = 45.0
+
+[node name="Label" type="Label" parent="Control/DayZPath"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -245.61
+grow_horizontal = 2
+grow_vertical = 2
+text = "DayZ Path"
+vertical_alignment = 1
+
+[node name="DayzPathLineEdit" type="LineEdit" parent="Control/DayZPath"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 117.0
+offset_right = 0.390015
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 185.0
+offset_right = 795.0
+offset_bottom = 225.0
+text = "Save Config and Mods"
+
+[node name="ConFigFolderButton" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 530.0
+offset_right = 234.0
+offset_bottom = 561.0
+grow_vertical = 0
+text = "Open ServerUtilConfig Folder"
+
+[node name="ModPanel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 230.0
+offset_right = 440.0
+offset_bottom = 530.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Deactivated Mods" type="ItemList" parent="Control/ModPanel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 33.655
+offset_right = 395.0
+offset_bottom = 333.656
+allow_search = false
+
+[node name="Activated Mods" type="ItemList" parent="Control/ModPanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -395.0
+offset_top = 33.655
+offset_right = -4.99988
+offset_bottom = 333.656
+grow_horizontal = 0
+select_mode = 1
+allow_search = false
+
+[node name="Label" type="Label" parent="Control/ModPanel"]
+layout_mode = 0
+offset_left = 12.76
+offset_top = 6.115
+offset_right = 151.76
+offset_bottom = 32.115
+text = "Deactivated Mods"
+
+[node name="Label2" type="Label" parent="Control/ModPanel"]
+layout_mode = 0
+offset_left = 416.88
+offset_top = 6.115
+offset_right = 536.88
+offset_bottom = 32.115
+text = "Activated Mods"
+
+[node name="ModWarning" type="Label" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 286.985
+offset_top = 533.145
+offset_right = 429.985
+offset_bottom = 559.145
+grow_horizontal = 0
+grow_vertical = 0
+text = "Transferring Mods Please Wait"
+horizontal_alignment = 2
+
+[node name="ServerFolder2" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 570.0
+offset_right = 635.0
+offset_bottom = 601.0
+text = "Open Server Folder"
+
+[node name="DayZFolder" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 570.0
+offset_right = 471.0
+offset_bottom = 601.0
+text = "Open DayZ Workshop Folder"
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/ConFigFolderButton" to="Control" method="_on_config_folder_btn_pressed"]
+[connection signal="item_activated" from="Control/ModPanel/Deactivated Mods" to="Control" method="_on_deactivated_mod_activated"]
+[connection signal="item_activated" from="Control/ModPanel/Activated Mods" to="Control" method="_on_activated_mod_activated"]
+[connection signal="pressed" from="Control/ServerFolder2" to="Control" method="_on_server_folder_pressed"]
+[connection signal="pressed" from="Control/DayZFolder" to="Control" method="_on_dayz_folder_pressed"]
